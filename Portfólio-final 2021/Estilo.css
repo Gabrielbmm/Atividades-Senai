@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+body{
+    background-color: burlywood;
+    color: black;
+    text-align: left;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: solid white;
+
+}
+
+.cabecalho{
+    background-color: rgb(255, 158, 79);
+    color:white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 150%;
+    border: solid;
+    border-width: 8px;
+ 
+}
+
+.texto{
+    font-size: 25px;
+    padding: 20px ;
+}
+
+
+footer{
+    background-color: rgb(255, 158, 79);
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 150%;
+    border: solid;
+    border-width: 8px;
+
+    
+}
+
+@media only screen and (max-width:700px) {
+
+    footer{
+        font-size: small;
+    }
+
+}
+
+.kdk {
+    color: rgb(2, 81, 250);
+    font-size: 30px;
+}
