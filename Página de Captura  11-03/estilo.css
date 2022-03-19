@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    background-color:#FEF3EA;
+    text-align: center;
+}
+
+img{
+    margin-top: 50px;
+    width: 250px;
+    height: 250px;
+}
+
+H1{
+    font-size: 65px;
+    text-align: center;
+    
+}
+
+h2{
+    text-align: center;
+    
+}
+
+input{
+    font-size: 35px;
+    background-color: turquoise;
+    margin-top: 70px;
+    width: 700px;
+    text-align: center;
+    
+}
+
+.rod{
+    background-color: rgb(182, 177, 177);
+    text-align: center;
+    font-size: 30px;
+    margin-top: 90px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    display: flex;
+
+}
+
+.prod{
+    width: 50%;
+    text-align: center;
+
+}
