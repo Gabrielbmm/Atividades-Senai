@@ -15,7 +15,7 @@ public class Funcionario {
     @NotNull
     private String nome;
     @Size(max = 15)
-    private String Cpf;
+    private String cpf;
     @Size (max = 100)
     private String email;
     @Size(max = 30)
@@ -26,8 +26,8 @@ public class Funcionario {
     public void setId(Long id) {this.id = id;}
     public String getNome() {return nome;}
     public void setNome(String nome) {this.nome = nome;}
-    public String getCPF() {return Cpf;}
-    public void setCPF(String CPF) {this.Cpf = CPF;}
+    public String Cpf() {return cpf;}
+    public void setCpf(String cpf) {this.cpf = cpf;}
     public String getEmail() {return email;}
     public void setEmail(String email) {this.email = email;}
     public String getTelefone() {return telefone;}
@@ -38,7 +38,7 @@ public class Funcionario {
         return "Funcionario{" +
                 "id: " + id +
                 ", nome: " + nome  +
-                ", CPF: " + Cpf +
+                ", CPF: " + cpf +
                 ", email: " + email  +
                 ", telefone: " + telefone;
     }

@@ -86,4 +86,14 @@ footer{
 
 }
 
+.tabela{
+    width: 700px;
+    text-align: center;
+    margin: auto;
+    padding-top: 15em;
+    min-width: 300px;
+    max-width: 700px;
+    margin-bottom:15em;
+
+}
 
