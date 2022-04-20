@@ -1,3 +1,8 @@
+
+/* https://www.flaticon.com/br/uicons?word=editar site utilizado para as fontes */
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
 body{
     margin: 0;
     padding: 0;
@@ -94,6 +99,7 @@ footer{
     min-width: 300px;
     max-width: 700px;
     margin-bottom:15em;
+
 
 }
 
