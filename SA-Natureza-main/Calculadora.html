@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title></title>
+</head>
+
+<body>
+
+    <div class="cabecalho">
+        <div class="navbar">
+            <h3>SA Termodinâmica</h4>
+
+                <div class="opcoes">
+                    <ul>
+                        <li><a href="Index.html">Inicio</a></li>
+                        <li><a href="Leis Termodinâmica.html">Leis Termodinâmica</a></li>
+                        <li><a href="Aplicação ds Máquinas.html">Aplicação das maquinas no dia a dia</a></li>
+                        <li><a href="Nossa Máquina.html">Nossa Máquina</a></li>
+                        <li><a href="Calculadora.html" class="active">Calculadora</a></li>
+                        <li><a href="Referências.html">Referências</a></li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="titulo">
+            <h2>Calculadora SA</h2>
+        </div>
+    </div>
+
+    <div class="Calculadora">
+
+        <hr class="separador">
+
+        <div class="titulosc">
+        <p>Rendimento</p> 
+        </div>
+
+        <div>
+            <label>Valor de Q1 (Calor Fonte Quente):</label>
+            <input type="number" id="Q1" class="inputs" placeholder="insira o Q1">
+
+            <label>Valor de Q2 (Calor Fonte Fria):</label>
+            <input type="number" id="Q2" class="inputs" placeholder="insira o Q2">
+
+            <button type="button" class="botao" onclick="rendimento()">
+                Calcular Rendimento
+            </button>
+        </div>
+
+        <script>
+            const rendimento = function () {
+                let Q1 = parseFloat(document.getElementById('Q1').value)
+                let Q2 = parseFloat(document.getElementById('Q2').value)
+                let resultado = (Q1 / Q2) - 1
+                alert("O Rendimento é = " + (resultado))
+            }
+        </script>
+
+        <br>
+        <hr class="separador">
+
+        <div class="titulosc">
+        <p>Energia</p> 
+        </div>
+
+        <div>
+            <label>Valor de Q (Calor):</label>
+            <input type="number" id="Q" class="inputs" placeholder="insira o Calor">
+
+            <label>Valor de W (Trabalho):</label>
+            <input type="number" id="W" class="inputs" placeholder="insira o Trabalho">
+
+            <button type="button" class="botao" onclick="pleipconta()">
+                Calcular Energia
+            </button>
+        </div>
+
+        <script>
+            const pleipconta = function () {
+                let Q = parseFloat(document.getElementById('Q').value)
+                let W = parseFloat(document.getElementById('W').value)
+                let resultado = Q - W
+                alert("A Energia é = " + (resultado))
+            }
+        </script>
+
+        <br>
+        <hr class="separador">
+
+        <div class="titulosc">
+        <p>Calor</p> 
+        </div>
+
+        <div>
+            <label>Valor de U (Energia):</label>
+            <input type="number" id="U" class="inputs" placeholder="insira a Energia">
+
+            <label>Valor de W (Trabalho):</label>
+            <input type="number" id="W2" class="inputs" placeholder="insira o Trabalho">
+
+            <button type="button" class="botao" onclick="pleisconta()">
+                Calcular Calor
+            </button>
+        </div>
+
+        <script>
+            const pleisconta = function () {
+                let U = parseFloat(document.getElementById('U').value)
+                let W2 = parseFloat(document.getElementById('W2').value)
+                let resultado = U + W2
+                alert("O Calor é = " + (resultado))
+            }
+        </script>
+
+        <br>        
+        <hr class="separador">
+
+        <div class="titulosc">
+        <p>Trabalho</p> 
+        </div>
+
+        <div>
+            <label>Valor de U (Energia):</label>
+            <input type="number" id="U2" class="inputs" placeholder="insira a Energia">
+
+            <label>Valor de Q (Calor):</label>
+            <input type="number" id="Q3" class="inputs" placeholder="insira o Calor">
+
+            <button type="button" class="botao" onclick="pleitconta()">
+                Calcular Trabalho
+            </button>
+        </div>
+
+        <script>
+            const pleitconta = function () {
+                let U2 = parseFloat(document.getElementById('U2').value)
+                let Q3 = parseFloat(document.getElementById('Q3').value)
+                let resultado = U2 - Q3
+                alert("O Trabalho é = " + (resultado))
+            }
+        </script>
+
+        <hr class="separador">
+
+    </div>
+
+    <footer>
+        <!--Roda pé -->
+
+        <li>matheus_m_reis@estudante.sc.senai.br</li>
+
+        <li>gabrielmazzollamorais@estudante.sc.senai.br</li>
+
+        <li>peterson_g_silva@estudante.sc.senai.br</li>
+
+        <li>igor_rosiak@estudante.sc.senai.br</li>
+
+        <li>anna_fiameti@estudante.sc.senia.br</li>
+
+    </footer>
+
+</body>
+
+</html>

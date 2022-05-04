@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(19, 17, 17);
+}
+
+li{
+    display: inline;
+    padding: 0.5em;
+}
+
+.cabecalho {
+    background-color:rgb(0, 0, 0);
+    color: white;
+    padding: 0 4px 0 4px;
+}
+
+.cabecalho .navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.opcoes ul > li > a {
+    color: white;
+}
+.opcoes ul > li > a.active {
+    color: white;
+    font-weight: bold;
+}
+
+.titulo {
+    padding: 9px;
+    display: flex;
+    place-content: center;
+}
+
+.titulo h2 {
+    font-size: 56px;
+    border: solid 5px;
+    padding: 25px;
+}
+
+.briefing {
+    margin: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 22px;
+    padding: 23px 0;
+    text-align: center;
+}
+
+.conteudo {
+    display: flex;
+    color: white;
+    
+}
+
+.conteudo .esquerda {
+    width: 50%;
+    height: 50%;
+    color: white;
+}
+
+.conteudo .direita {
+    width: 50%;
+    font-size: 21px;
+    color:white
+}
+
+.conteudo2{
+    display: flex;
+    color: white;
+}
+.conteudo2 .esquerda2 {
+    width: 50%;
+    height: 50%;
+    color: white;
+}
+.conteudo2 .direita2 {
+    width: 50%;
+    font-size: 22px;
+    color: white;
+    
+}  
+
+.separador {
+    margin: 15px 15px;
+    border-color: rgb(0, 0, 0);
+    background-color: black;
+    color: black;
+    
+    
+}
+
+.imagens {
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.referenciast {
+    color: white;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.video {
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(0, 0, 0)  ;
+    color: aliceblue;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+footer ul {
+    list-style: none;
+    
+}
+
+footer li {
+    margin: 1px;
+}
+
+.Calculadora {
+    color: white;
+    text-align: center;
+    font-style: oblique;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.titulosc {
+    font-size: 30px;
+}
+
+.botao {
+    color: white;
+    background-color: black;
+}
+
+.inputs {
+    border-color: white;
+    background-color:black;
+    color:white;
+}
