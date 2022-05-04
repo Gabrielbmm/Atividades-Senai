@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"></html>
   <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -29,11 +29,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item-1">
-              <a class="nav-fonte" aria-current="page" href="../index">Projetos</a>
-            </li>
             <li class="nav-item-2">
-              <a class="nav-fonte" href="./list">Funcionário</a>
+              <a class="nav-fonte" href="./list">Funcionários</a>
             </li>
             <li class="nav-item-3">
               <a class="nav-fonte" href="../sobre">Sobre</a>
@@ -50,36 +47,23 @@
             <th scope="col">Nome</th>
             <th scope="col">CPF</th>
             <th scope="col">Telefone</th>
-            <th scope="col" colspan="3">Email</th>
+            <th scope="col" colspan="2">Email</th>
+            <th scope="col"><a class="add" href="./add"><i class="fi fi-ss-add"></i></a></th>
+            
+            
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>567.789.123</td>
-            <td>48 96543 1233</td>
-            <td>mark@gmail.com</td>
-            <td><i class="fi fi-rr-edit"></i></td>
-            <td><i class="fi fi-br-trash"></i></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>123.456.789</td>
-            <td>48 98945 1278</td>
-            <td>jacob@gmail.com</td>
-            <td><i class="fi fi-rr-edit"></i></td>
-            <td><i class="fi fi-br-trash"></i></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>789.123.456</td>
-            <td>48 97896 1234</td>
-            <td>lary@gmail.com</td>
-            <td><i class="fi fi-rr-edit"></i></td>
-            <td><i class="fi fi-br-trash"></i></td>
+          <tr th:each="funcionario:${funcionarios}">
+
+            <td scope="row" th:text="${funcionario.id}"></td>
+            <td th:text="${funcionario.nome}"></td>
+            <td th:text="${funcionario.cpf}"></td>
+            <td th:text="${funcionario.telefone}"></td>
+            <td th:text="${funcionario.email}"></td>
+            <td scope="col"><i class="fi fi-sr-trash"></i>
+            <td scope="col"> <i class="fi fi-sr-edit"></i>
+
           </tr>
         </tbody>
       </table>

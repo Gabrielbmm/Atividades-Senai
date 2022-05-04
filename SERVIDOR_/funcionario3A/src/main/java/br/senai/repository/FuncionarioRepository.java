@@ -15,7 +15,4 @@ public interface FuncionarioRepository extends JpaRepository <Funcionario, Long>
     public Funcionario findByNomeAndEmail(String nome, String email);
     public List<Funcionario> findByTelefoneLike(String telefone);
 
-
-
-
 }
