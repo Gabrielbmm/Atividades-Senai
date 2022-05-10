@@ -102,4 +102,21 @@ footer{
 
 
 }
+.form-floating{
+    margin-top: 18px; 
+    padding: 8px;
+    border: 2px solid burlywood;
+    border-radius: 15px;
+    width: 75%;
+    height: 50%;
 
+}
+
+.tabelinha{
+    align-items: center;
+}
+
+.buton{
+    align-items: center;
+    
+}
