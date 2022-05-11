@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+</html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../bootstrap-5.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/estilo.css" />
+
+    <title>Lista</title>
+</head>
+
+<body>
+<header>
+    <h2>Lista</h2>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">NewProjects</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item-2">
+                    <a class="nav-fonte" href="./list">Funcionários</a>
+                </li>
+                <li class="nav-item-3">
+                    <a class="nav-fonte" href="../sobre">Sobre</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="tabelinha">
+    <div class="container">
+        <div class="div-title">
+            <h2>Funcionário</h2>
+        </div>
+        <form th:action="@{/funcionario/save}" method="post" th:objects="${funcionario}">
+
+
+            <div class="form-floating mb-3">
+                <input type="number" th:fild="*{id}" readonly class="form-control"  id="floatingInputId" placeholder=" ">
+                <label for="floatingInputId">Código</label>
+            </div>
+
+            <div th:if="${isSaved}" class="alert alert-success">
+                <h4>Operação realizada com sucesso!</h4>
+            </div>
+
+            <div th:if="${isError}" class="alert alert-danger">
+                <h4>Erro ao tentar salbar os dados!!</h4>
+                <label th:text="{#errorMsg}"></label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" th:fild="${funcionario.Nome} "class="form-control" id="floatingInputNome" placeholder=" ">
+                <label for="floatingInputNome">Nome</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" th:fild="${funcionario.Cpf} "class="form-control" id="floatingInputCpf" placeholder=" ">
+                <label for="floatingInputCpf">Cpf</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="email" th:fild="${funcionario.email} "class="form-control" id="floatingInputEmail" placeholder=" ">
+                <label for="floatingInputEmail">Email</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="telefone" th:fild="${funcionario.telefone} "class="form-control" id="floatingInputtelefone" placeholder=" ">
+                <label for="floatingInputtelefone">Telefone</label>
+            </div>
+            <div class="buton">
+                <div class="form-floating mb-3">
+                    <button type="submit" class="btn bt-success">Salvar</button>
+
+                    <button type="button" class="btn btn-secondary"
+                            onclick="window.location.href='../list'">Cancelar</button>
+
+                </div>
+            </div>
+    </div>
+    </form>
+</div>
+</div>
+
+<footer>
+    <div class="coluna2">
+        <ul>
+            <h3>Localização: SENAI CTAI</h3>
+            <p>Rodovia, SC-401, 3730 - Saco Grande, Florianópolis - SC, 88032-005</p>
+            <p>(48) 93239-5800</p>
+        </ul>
+    </div>
+
+    <div class="coluna1">
+        <h3>Contato</h3>
+        <ul>
+
+            <p>Telefone: (48) 988641053</p>
+        </ul>
+    </div>
+</footer>
+
+<script src="../js/popper.min.js"></script>
+<script src="../bootstrap-5.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

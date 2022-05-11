@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"></html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -61,8 +61,8 @@
             <td th:text="${funcionario.cpf}"></td>
             <td th:text="${funcionario.telefone}"></td>
             <td th:text="${funcionario.email}"></td>
-            <td scope="col"><i class="fi fi-sr-trash"></i>
-            <td scope="col"> <i class="fi fi-sr-edit"></i>
+            <td scope="col"><a class="a-edit" th:href="@{'./edit/' + ${funcionario.id}}"><i class="fa fa-edit"></i></a></td>
+            <td scope="col"><a class="a-delete" href="./>delete/1"><i class="fi fi-sr-edit"></i></a></td>
 
           </tr>
         </tbody>

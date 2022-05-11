@@ -22,6 +22,13 @@ public class FuncionarioServiceImpl implements FuncionarioService {
     public Funcionario findByNome(String nome) {
         return null;
     }
+
+    @Override
+    public Funcionario findById(Long id){
+        Funcionario func = funcionarioRepository.findById(id).get();
+        return func != null ?  func : new Funcionario();
+
+    }
     @Override
     public Funcionario save(Funcionario funcionario){
         try{
