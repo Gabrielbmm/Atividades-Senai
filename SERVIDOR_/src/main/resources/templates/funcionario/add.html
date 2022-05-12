@@ -41,40 +41,40 @@
             <div class="div-title">
                 <h2>Funcionário</h2>
             </div>
-            <form th:action="@{/funcionario/save}" method="post" th:objects="${funcionario}">
+            <div th:if="${isSaved}" class="alert alert-success">
+                <h4>Operação realizada com sucesso!</h4>
+            </div>
+
+            <div th:if="${isError}" class="alert alert-danger">
+                <h4>Erro ao tentar salvar os dados!!</h4>
+                <label th:text="#{errorMsg}"></label>
+            </div>
+            <form th:action="@{/funcionario/save}" method="post" th:object="${funcionario}">
 
 
                 <div class="form-floating mb-3">
-                    <input type="number" th:fild="*{id}" readonly class="form-control"  id="floatingInputId" placeholder=" ">
+                    <input type="number" th:field="*{id}" readonly class="form-control"  id="floatingInputId" placeholder=" ">
                     <label for="floatingInputId">Código</label>
                 </div>
 
-                <div th:if="${isSaved}" class="alert alert-success">
-                    <h4>Operação realizada com sucesso!</h4>
-                </div>
-
-                <div th:if="${isError}" class="alert alert-danger">
-                    <h4>Erro ao tentar salbar os dados!!</h4>
-                    <label th:text="{#errorMsg}"></label>
-                </div>
 
                 <div class="form-floating mb-3">
-                    <input type="text" th:fild="*{Nome} "class="form-control" id="floatingInputNome" placeholder=" ">
+                    <input type="text" th:field="*{nome} "class="form-control" id="floatingInputNome" placeholder=" ">
                     <label for="floatingInputNome">Nome</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="text" th:fild="*{Cpf} "class="form-control" id="floatingInputCpf" placeholder=" ">
+                    <input type="number" th:field="*{cpf} "class="form-control" id="floatingInputCpf" placeholder=" ">
                     <label for="floatingInputCpf">Cpf</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="email" th:fild="*{email} "class="form-control" id="floatingInputEmail" placeholder=" ">
+                    <input type="email" th:field="*{email} "class="form-control" id="floatingInputEmail" placeholder=" ">
                     <label for="floatingInputEmail">Email</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="telefone" th:fild="*{telefone} "class="form-control" id="floatingInputtelefone" placeholder=" ">
+                    <input type="number" th:field="*{telefone} "class="form-control" id="floatingInputtelefone" placeholder=" ">
                     <label for="floatingInputtelefone">Telefone</label>
                 </div>
                 <div class="buton">
@@ -89,23 +89,7 @@
     </div>
     </div>
 
-    <footer>
-        <div class="coluna2">
-            <ul>
-                <h3>Localização: SENAI CTAI</h3>
-                <p>Rodovia, SC-401, 3730 - Saco Grande, Florianópolis - SC, 88032-005</p>
-                <p>(48) 93239-5800</p>
-            </ul>
-        </div>
 
-        <div class="coluna1">
-            <h3>Contato</h3>
-            <ul>
-
-                <p>Telefone: (48) 988641053</p>
-            </ul>
-        </div>
-    </footer>
 
     <script src="../js/popper.min.js"></script>
     <script src="../bootstrap-5.0.0/js/bootstrap.min.js"></script>

@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
-
-</html>
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -42,41 +39,41 @@
     <div class="container">
         <div class="div-title">
             <h2>Funcionário</h2>
-        </div>
-        <form th:action="@{/funcionario/save}" method="post" th:objects="${funcionario}">
-
-
-            <div class="form-floating mb-3">
-                <input type="number" th:fild="*{id}" readonly class="form-control"  id="floatingInputId" placeholder=" ">
-                <label for="floatingInputId">Código</label>
-            </div>
 
             <div th:if="${isSaved}" class="alert alert-success">
                 <h4>Operação realizada com sucesso!</h4>
             </div>
 
             <div th:if="${isError}" class="alert alert-danger">
-                <h4>Erro ao tentar salbar os dados!!</h4>
-                <label th:text="{#errorMsg}"></label>
+                <h4>Erro ao tentar salvarr os dados!!</h4>
+                <label th:text="#{errorMsg}"></label>
+            </div>
+        </div>
+        <form th:action="@{/funcionario/save}" method="post" th:objects="${funcionario}">
+
+
+            <div class="form-floating mb-3">
+                <input type="number" th:field="*{id}" readonly class="form-control"  id="floatingInputId" placeholder=" ">
+                <label for="floatingInputId">Código</label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" th:fild="${funcionario.Nome} "class="form-control" id="floatingInputNome" placeholder=" ">
+                <input type="text" th:field="${funcionario.nome} "class="form-control" id="floatingInputNome" placeholder=" ">
                 <label for="floatingInputNome">Nome</label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" th:fild="${funcionario.Cpf} "class="form-control" id="floatingInputCpf" placeholder=" ">
+                <input type="number" th:field="${funcionario.cpf} "class="form-control" id="floatingInputCpf" placeholder=" ">
                 <label for="floatingInputCpf">Cpf</label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="email" th:fild="${funcionario.email} "class="form-control" id="floatingInputEmail" placeholder=" ">
+                <input type="email" th:field="${funcionario.email} "class="form-control" id="floatingInputEmail" placeholder=" ">
                 <label for="floatingInputEmail">Email</label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="telefone" th:fild="${funcionario.telefone} "class="form-control" id="floatingInputtelefone" placeholder=" ">
+                <input type="number" th:field="${funcionario.telefone} "class="form-control" id="floatingInputtelefone" placeholder=" ">
                 <label for="floatingInputtelefone">Telefone</label>
             </div>
             <div class="buton">

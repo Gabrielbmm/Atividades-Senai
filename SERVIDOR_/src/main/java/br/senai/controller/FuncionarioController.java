@@ -33,10 +33,17 @@ public class FuncionarioController {
         model.addAttribute("funcionario",funcionarioService.findById(id));
         return "funcionario/edit";
     }
+    //comentario ajusatr
+    @GetMapping("/funcionario/delete/{id}")
+    public String delete(Model model, @PathVariable long id){
+        model.addAttribute("funcionario",funcionarioService.delete(funcionarioService.findById(id)));
+        return"funcionario/delete";
+    }
 
     @PostMapping("/funcionario/save")
     public String save(Funcionario funcionario, Model model) {
         try {
+            System.out.println("->>>>>>"+funcionario);
             funcionarioService.save(funcionario);
             model.addAttribute("funcionario",funcionario);
             model.addAttribute("isSaved",true);

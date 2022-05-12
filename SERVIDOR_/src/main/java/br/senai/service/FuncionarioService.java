@@ -10,5 +10,8 @@ public interface FuncionarioService {
     public Funcionario findByNome(String nome);
     public Funcionario save(Funcionario funcionario);
 
+    //comentario ajusatr
+    public Funcionario delete(Funcionario funcionario);
+
 
 }
