@@ -9,9 +9,7 @@ public interface FuncionarioService {
     public Funcionario findById(Long id);
     public Funcionario findByNome(String nome);
     public Funcionario save(Funcionario funcionario);
-
-    //comentario ajusatr
-    public Funcionario delete(Funcionario funcionario);
+    public void deletebyId(Long id);
 
 
 }

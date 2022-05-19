@@ -28,11 +28,6 @@ public class FuncionarioServiceImpl implements FuncionarioService {
         Funcionario func = funcionarioRepository.findById(id).get();
         return func != null ?  func : new Funcionario();
     }
-    //comnetraio ajusatr
-    @Override
-    public Funcionario deleteById(Long id){
-        Funcionario func = funcionarioRepository.deleteById(id){return func = null;};
-    }
 
     @Override
     public Funcionario save(Funcionario funcionario){
@@ -42,4 +37,14 @@ public class FuncionarioServiceImpl implements FuncionarioService {
             throw e;
         }
     }
+
+    @Override
+    public void deletebyId(Long id) {
+        try{
+            funcionarioRepository.deleteById(id);
+        } catch(Exception e){
+            throw e;
+        }
+    }
 }
+

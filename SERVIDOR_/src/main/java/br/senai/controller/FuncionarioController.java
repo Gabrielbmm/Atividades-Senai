@@ -33,13 +33,6 @@ public class FuncionarioController {
         model.addAttribute("funcionario",funcionarioService.findById(id));
         return "funcionario/edit";
     }
-    //comentario ajusatr
-    @GetMapping("/funcionario/delete/{id}")
-    public String delete(Model model, @PathVariable long id){
-        model.addAttribute("funcionario",funcionarioService.delete(funcionarioService.findById(id)));
-        return"funcionario/delete";
-    }
-
     @PostMapping("/funcionario/save")
     public String save(Funcionario funcionario, Model model) {
         try {
@@ -55,6 +48,15 @@ public class FuncionarioController {
             model.addAttribute("errorMsg", e.getMessage());
             return "funcionario/add";
         }
+    }
+    @GetMapping("/funcionario/delete/{id}")
+    public String delete (@PathVariable long id){
+        try{
+            funcionarioService.deletebyId(id);
+        }catch (Exception e){
+            System.out.println("Error: " + e.getMessage());
+        }
+        return "redirect:/funcionario/list";
     }
 }
 
