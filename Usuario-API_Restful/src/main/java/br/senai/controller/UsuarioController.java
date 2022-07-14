@@ -20,9 +20,7 @@ public class UsuarioController {
         return usuarioService.findAll();
     }
 
-
     @GetMapping("/usuario/{id}")
-
     public Optional<Usuario> findById(@PathVariable Long id){
         return usuarioService.findById(id);
         }
@@ -31,6 +29,7 @@ public class UsuarioController {
     public Usuario create (@RequestBody Usuario usuario){
         return usuarioService.create(usuario);
     }
+
     @PutMapping("/usuario/{id}")
     public Usuario update (@RequestBody Usuario usuario, @PathVariable Long id){
         return  usuarioService.update(usuario,id);
